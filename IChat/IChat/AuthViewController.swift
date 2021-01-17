@@ -9,20 +9,47 @@ import UIKit
 
 class AuthViewController: UIViewController {
   
+//  MARK: - PROPERTIES
   let logoImageView = UIImageView(image: #imageLiteral(resourceName: "Logo"), contentMode: .scaleAspectFit)
   
   let googleLabel = UILabel(text: "Get started with")
   let emailLabel = UILabel(text: "Or sign up with")
   let alreadyOnboardLabel = UILabel(text: "Already onboard?")
-  
-  
+    
   let googleButton = UIButton(title: "Google", titleColor: .black, backgroundColor: .white, isShadow: true)
   let emailButton = UIButton(title: "Email", titleColor: .white, backgroundColor: .buttonDark())
   let loginButton = UIButton(title: "Login", titleColor: .buttonRed(), backgroundColor: .white, isShadow: true)
-
+  
+// MARK: - viewDidLoad
   override func viewDidLoad() {
     super.viewDidLoad()
-    view.backgroundColor = .red
+    view.backgroundColor = .white 
+    setupConstraints()
+  }
+  
+  private func setupConstraints(){
+    logoImageView.translatesAutoresizingMaskIntoConstraints = false
+    
+    let googlView = ButtonFormView(label: googleLabel, button: googleButton)
+    let emailView = ButtonFormView(label: emailLabel, button: emailButton)
+    let loginView = ButtonFormView(label: alreadyOnboardLabel, button: loginButton)
+    
+    let stackView = UIStackView(arrangedSubviews: [googlView, emailView, loginView], axis: .vertical, spacing: 40)
+    stackView.translatesAutoresizingMaskIntoConstraints = false
+    
+    view.addSubview(logoImageView)
+    view.addSubview(stackView)
+    
+    NSLayoutConstraint.activate([
+      logoImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 160),
+      logoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+    ])
+    
+    NSLayoutConstraint.activate([
+      stackView.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 160),
+      stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
+      stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40)
+    ])
   }
 }
 
