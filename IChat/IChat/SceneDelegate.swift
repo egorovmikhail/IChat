@@ -17,7 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     guard let windowScen = (scene as? UIWindowScene) else { return }
     window = UIWindow(frame: windowScen.coordinateSpace.bounds)
     window?.windowScene = windowScen
-    window?.rootViewController = ViewController()
+    window?.rootViewController = AuthViewController()
     window?.makeKeyAndVisible()
   }
 
