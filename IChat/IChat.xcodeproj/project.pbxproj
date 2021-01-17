@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		815681F125B48890003274E7 /* ButtonFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815681F025B48890003274E7 /* ButtonFormView.swift */; };
+		815681F425B49435003274E7 /* StackView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815681F325B49435003274E7 /* StackView + Extension.swift */; };
 		819D9DC525B363B40071D514 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819D9DC425B363B40071D514 /* AppDelegate.swift */; };
 		819D9DC725B363B40071D514 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819D9DC625B363B40071D514 /* SceneDelegate.swift */; };
 		819D9DC925B363B40071D514 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819D9DC825B363B40071D514 /* AuthViewController.swift */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		815681F025B48890003274E7 /* ButtonFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFormView.swift; sourceTree = "<group>"; };
+		815681F325B49435003274E7 /* StackView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StackView + Extension.swift"; sourceTree = "<group>"; };
 		819D9DC125B363B40071D514 /* IChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		819D9DC425B363B40071D514 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		819D9DC625B363B40071D514 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,16 +71,34 @@
 				819D9DC425B363B40071D514 /* AppDelegate.swift */,
 				819D9DC625B363B40071D514 /* SceneDelegate.swift */,
 				819D9DC825B363B40071D514 /* AuthViewController.swift */,
-				81EC328325B4701B00990EFE /* UIImageView + Extension.swift */,
-				81EC328025B46D3300990EFE /* Label + Extension.swift */,
-				81EC327D25B4658D00990EFE /* UIColor + Extension.swift */,
-				81EC327A25B4631300990EFE /* UIFont + Extension.swift */,
-				81EC327325B45CA600990EFE /* UIButton + Extension.swift */,
+				81CDCA3C25B47A560002231A /* Extensions */,
 				819D9DCD25B363B50071D514 /* Assets.xcassets */,
 				819D9DCF25B363B50071D514 /* LaunchScreen.storyboard */,
 				819D9DD225B363B50071D514 /* Info.plist */,
 			);
 			path = IChat;
+			sourceTree = "<group>";
+		};
+		81CDCA3B25B47A380002231A /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				81EC328325B4701B00990EFE /* UIImageView + Extension.swift */,
+				81EC328025B46D3300990EFE /* Label + Extension.swift */,
+				81EC327D25B4658D00990EFE /* UIColor + Extension.swift */,
+				81EC327A25B4631300990EFE /* UIFont + Extension.swift */,
+				81EC327325B45CA600990EFE /* UIButton + Extension.swift */,
+				815681F325B49435003274E7 /* StackView + Extension.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		81CDCA3C25B47A560002231A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				815681F025B48890003274E7 /* ButtonFormView.swift */,
+				81CDCA3B25B47A380002231A /* UIKit */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,11 +173,13 @@
 				81EC327B25B4631300990EFE /* UIFont + Extension.swift in Sources */,
 				819D9DC925B363B40071D514 /* AuthViewController.swift in Sources */,
 				81EC328125B46D3300990EFE /* Label + Extension.swift in Sources */,
+				815681F125B48890003274E7 /* ButtonFormView.swift in Sources */,
 				819D9DC525B363B40071D514 /* AppDelegate.swift in Sources */,
 				81EC328425B4701B00990EFE /* UIImageView + Extension.swift in Sources */,
 				81EC327E25B4658D00990EFE /* UIColor + Extension.swift in Sources */,
 				819D9DC725B363B40071D514 /* SceneDelegate.swift in Sources */,
 				81EC327425B45CA600990EFE /* UIButton + Extension.swift in Sources */,
+				815681F425B49435003274E7 /* StackView + Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
