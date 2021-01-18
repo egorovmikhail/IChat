@@ -23,7 +23,7 @@ class AuthViewController: UIViewController {
 // MARK: - viewDidLoad
   override func viewDidLoad() {
     super.viewDidLoad()
-    view.backgroundColor = .white 
+    view.backgroundColor = #colorLiteral(red: 0.2305597663, green: 0.7608497739, blue: 0.8977946043, alpha: 1)
     setupConstraints()
   }
 }
@@ -55,6 +55,7 @@ extension AuthViewController {
     ])
   }
 }
+
 
 // MARK: PREVIEW
 import SwiftUI
